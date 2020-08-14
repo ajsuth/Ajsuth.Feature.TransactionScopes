@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "dc5a9811-39ce-427e-aa9c-50f5720c4334",
+		"name": "TransactionScope Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Transaction Test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1fd79923-b080-4b03-8810-47fec9bad15a",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "ShopName",
+						"value": "{{ShopName}}"
+					},
+					{
+						"key": "ShopperId",
+						"value": "{{ShopperId}}"
+					},
+					{
+						"key": "Language",
+						"value": "{{Language}}"
+					},
+					{
+						"key": "Currency",
+						"value": "{{Currency}}"
+					},
+					{
+						"key": "Environment",
+						"value": "{{Environment}}"
+					},
+					{
+						"key": "GeoLocation",
+						"value": "{{GeoLocation}}"
+					},
+					{
+						"key": "CustomerId",
+						"value": "{{CustomerId}}"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{SitecoreIdToken}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"innerError\": true,\n    \"outerError\": false,\n    \"outerErrorBeforeInner\": true,\n    \"newContext\": false,\n    \"transactionScopeOption\": \"1\"\n}\n"
+				},
+				"url": {
+					"raw": "{{ServiceHost}}/{{ShopsApi}}/TransactionScopeTest()",
+					"host": [
+						"{{ServiceHost}}"
+					],
+					"path": [
+						"{{ShopsApi}}",
+						"TransactionScopeTest()"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
